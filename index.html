@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+    <title>Admin Area | Dashboard</title>
+	<script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+  </head>
+  <body>
+		<nav class="navbar navbar-expand-lg navbar-dark main-color-bg">
+			<a class="navbar-brand" href="#">AdminStrap</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pages.html">Pages</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="posts.html">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="users.html">Users</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Welcome, Adel!</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<header id="header" class="p-1">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-10">
+						<h1><span class="fas fa-cog mr-1"></span>Dashboard <small class="text-muted">Manage your site</small><h1>
+					</div>
+					<div class="col-md-2">
+						<div class="dropdown mt-2 mr-5 float-right">
+							<button class="btn dropdown-toggle main-color-bg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Add...
+							</button>
+							<div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" data-toggle="modal" data-target="#addPage" href="#">Add Page</a>
+								<a class="dropdown-item" href="#">Add User</a>
+								<a class="dropdown-item" href="#">Add Post</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav aria-label="breadcrumb" id="breadcrumb">
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+				</ol>
+			</div>
+		</nav>
+		<section id="main">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="list-group">
+							<a href="index.html" class="list-group-item list-group-item-action active main-color-bg">
+								<span class="fas fa-cog mr-1"></span>Dashboard
+							</a>
+							<a href="pages.html" class="list-group-item list-group-item-action"><span class="fas fa-list-ul mr-1"></span>Pages</a>
+							<a href="posts.html" class="list-group-item list-group-item-action"><span class="fas fa-pencil-alt mr-1"></span>Posts</a>
+							<a href="users.html" class="list-group-item list-group-item-action"><span class="fas fa-users mr-1"></span>Users</a>
+						</div>
+						<div class="card mt-2">
+							<div class="card-body">
+								<h4>Disk space used</h4>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+								</div>
+								<h4 class="mt-2">Bandwidth used</h4>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+					
+						<!--Website overview -->
+						<div class="card">
+							<div class="card-header main-color-bg">
+								Website overview
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="card">
+											<div class="card-body text-center">
+												<h2><span class="fas fa-user mr-1"></span>203</h2>
+												<h4>Users</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="card">
+											<div class="card-body text-center">
+												<h2><span class="fas fa-list-ul mr-1"></span>12</h2>
+												<h4>Pages</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="card">
+											<div class="card-body text-center">
+												<h2><span class="fas fa-pencil-alt mr-1"></span>33</h2>
+												<h4>Posts</h4>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="card">
+											<div class="card-body text-center">
+												<h2><span class="fas fa-chart-bar mr-1"></span>33652</h2>
+												<h4>Visitors</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<!--Latest users-->
+						
+						<div class="card mt-2">
+							<div class="card-header main-color-bg">
+								Latest users
+							</div>
+							<div class="card-body">
+								<table class="table table-striped table-hover">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">First</th>
+											<th scope="col">Last</th>
+											<th scope="col">Handle</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Larry</td>
+											<td>the Bird</td>
+											<td>@twitter</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<footer id="footer" class="text-center">
+			<p>Copyright AdminStrap, &copy; 2018</p>
+		</footer>
+		<!--Modals-->
+		
+		<!--Add Page-->
+		
+		<div class="modal" id="addPage" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<form>
+						<div class="modal-header">
+							<h5 class="modal-title">Add Page</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							</div>
+							<div class="form-group">
+								<textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+			CKEDITOR.replace( 'editor1' );
+	</script>
+  </body>
+</html>
